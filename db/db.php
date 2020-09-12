@@ -12,7 +12,7 @@
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "CREATE TABLE  articles (
+    $sql = "CREATE TABLE IF NOT EXISTS articles (
      article_id  serial  PRIMARY KEY,
     article_titre varchar(120) NOT NULL,
     article_contenu text NOT NULL,
