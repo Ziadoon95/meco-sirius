@@ -40,7 +40,8 @@ $sql = 'INSERT INTO articles(categorie_nom , article_titre, article_contenu, art
 $statement = $conn->prepare($sql);
 echo "before sql";
 //Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
-$res = $statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu,  'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]]);
+try {
+  $res = $statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu,  'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]]);
 echo "after sql";
 echo $res;
 if ($res) {
@@ -49,3 +50,7 @@ if ($res) {
  }else {
    var_dump($res);
  }
+}catch(PDOException $e)
+{
+  echo $e->getMessage();
+}
