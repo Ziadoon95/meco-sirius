@@ -34,14 +34,13 @@ var_dump($article_cat);
 */
 //Insertion données dans DB
 $sql = 'INSERT INTO articles(categorie_nom , article_titre, article_contenu, article_image_data, article_image_type ,user_id) VALUES(:categ,:article_titre,
-:article_contenu, :article_image , :image_type , :user_id)';
+:article_contenu, :image_type , :user_id)';
 
 //Prepare
 $statement = $conn->prepare($sql);
 echo "before sql";
 //Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
-$res = $statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' =>
-$image_data, 'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]]);
+$res = $statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu,  'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]]);
 echo "after sql";
 echo $res;
 if ($res) {
