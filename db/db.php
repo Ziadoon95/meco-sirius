@@ -13,7 +13,7 @@
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "CREATE TABLE  articles (
-     article_id int(11) NOT NULL serial  PRIMARY KEY,
+     article_id  serial  PRIMARY KEY,
     article_titre varchar(120) NOT NULL,
     article_contenu text NOT NULL,
     article_date timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -24,7 +24,7 @@
 );";
 $conn->exec($sql);
       $sql_two ="CREATE TABLE  utilisateurs (
-        user_id int(11) NOT NULL serial PRIMARY KEY,
+        user_id  serial PRIMARY KEY,
         user_prenom varchar(64) COLLATE utf8_bin NOT NULL,
         user_nom varchar(64) COLLATE utf8_bin NOT NULL,
         user_email varchar(64) COLLATE utf8_bin NOT NULL,
