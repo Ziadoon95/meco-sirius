@@ -30,7 +30,7 @@ $conn->exec($sql);
         user_email varchar(64) COLLATE utf8_bin NOT NULL,
         user_mdp varchar(250) COLLATE utf8_bin NOT NULL,
         user_image mediumblob DEFAULT NULL,
-        user_is_connected int(1) DEFAULT NULL
+        user_is_connected int DEFAULT NULL
       )";    
 
       $conn->exec($sql_two);
