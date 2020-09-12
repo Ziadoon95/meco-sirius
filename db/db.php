@@ -23,7 +23,7 @@
     categorie_nom varchar(30) DEFAULT NULL
 );";
 $conn->exec($sql);
-      $sql_two ="CREATE TABLE  utilisateurs (
+      $sql_two ="CREATE TABLE IF NOT EXISTS utilisateurs (
         user_id  serial PRIMARY KEY,
         user_prenom varchar(64)  NOT NULL,
         user_nom varchar(64)  NOT NULL,
