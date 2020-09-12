@@ -17,7 +17,7 @@
     article_titre varchar(120) NOT NULL,
     article_contenu text NOT NULL,
     article_date timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP ,
-    article_image_data mediumblob DEFAULT NULL,
+    article_image_data BYTEA DEFAULT NULL,
     article_image_type varchar(40) DEFAULT NULL,
     user_id INT DEFAULT NULL,
     categorie_nom varchar(30) DEFAULT NULL
@@ -29,7 +29,7 @@ $conn->exec($sql);
         user_nom varchar(64)  NOT NULL,
         user_email varchar(64)  NOT NULL,
         user_mdp varchar(250)  NOT NULL,
-        user_image mediumblob DEFAULT NULL,
+        user_image BYTEA DEFAULT NULL,
         user_is_connected int DEFAULT NULL
       )";    
 
