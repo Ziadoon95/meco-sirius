@@ -19,7 +19,7 @@
     article_date timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP ,
     article_image_data blob DEFAULT NULL,
     article_image_type varchar(40) DEFAULT NULL,
-    user_id int(11) DEFAULT NULL,
+    user_id INT DEFAULT NULL,
     categorie_nom varchar(30) DEFAULT NULL
 );";
 $conn->exec($sql);
