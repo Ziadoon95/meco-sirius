@@ -18,7 +18,6 @@ if (isset($_POST['article_titre']) && isset($_POST['article_contenu'])) {
 
 //modifications 7/9/2020
 $image_data = file_get_contents($_FILES["article_image"]["tmp_name"]);
-var_dump($image_data);
 $image_type = $_FILES["article_image"]["type"];
 var_dump($image_type);
 
