@@ -1,0 +1,261 @@
+Body{
+    background-color:#FFFFFF;
+}
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-v13-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Nunito Regular'), local('Nunito-Regular'),
+         url('../fonts/nunito-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/nunito-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/nunito-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/nunito-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/nunito-v13-latin-regular.svg#Nunito') format('svg'); /* Legacy iOS */
+}
+
+
+h1{
+    color:#002B3D ;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: nunito;
+    padding-left: 80px;
+}
+h2{
+    color:#002B3D ;
+    font-size: 25px;
+    font-family: nunito;
+}
+h3{
+    color:#002B3D ;
+    font-size: 25px;
+    font-family: nunito;
+}
+p{
+    color:#002B3D ;
+    font-size: 16px;
+    font-family: nunito;
+    margin-top: 40px;
+}
+.container{
+    margin-top: 20px;
+    margin-left:10px;
+    margin-right: 5px;
+    padding-top: 100px;
+    padding-left: 30px;
+    display: inline-block;
+    vertical-align: middle
+}
+.TextSuppr{
+    
+    margin-top: 150px;
+    margin-bottom: 90px;
+    margin-left: 30px;
+    margin-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 15px;
+    font-family: nunito;
+}
+
+.boutton{
+    
+    display: inline-block;
+    flex-direction: row;
+    vertical-align: middle;
+    flex-direction: row;
+    margin-top: 50px;
+    
+}
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas:
+    "btnAnnuler btnSuppr";
+
+}
+
+
+.btnSuppr{
+    grid-area: btnSuppr;
+    background-color:#FF870A ;
+    color:#FFFFFF ;
+    font-size: 20px;
+    font-family: nunito;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-right: 9px;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 45px;
+    display: inline-block;
+    vertical-align: middle;
+    flex-direction: row;
+    
+}
+.btnSuppr a{
+    
+    text-decoration: none;
+    color:#FFFFFF;
+
+}
+
+.btnAnnuler{
+    
+    grid-area: btnAnnuler;
+    color:#002B3D  ;
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    font-family: nunito;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+
+    @font-face {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/nunito-v13-latin-regular.eot'); /* IE9 Compat Modes */
+        src: local('Nunito Regular'), local('Nunito-Regular'),
+             url('../fonts/nunito-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url('../fonts/nunito-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+             url('../fonts/nunito-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+             url('../fonts/nunito-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+             url('../fonts/nunito-v13-latin-regular.svg#Nunito') format('svg'); /* Legacy iOS */
+    }
+
+
+    Body{
+        background-color:#FFFFFF;
+    }
+    h1{
+        color:#002B3D ;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: nunito;
+        margin-top: 5px;
+        margin-left: 60px;
+    }
+    h2{
+        color:#002B3D ;
+        font-size: 25px;
+        font-family: nunito;
+    }
+    h3{
+        color:#002B3D ;
+        font-size: 25px;
+        font-family: nunito;
+    }
+    p{
+        color:#002B3D ;
+        font-size: 25px;
+        font-family: nunito;
+    }
+    .textSuppr{
+        margin-top: 150px;
+        margin-bottom: 90px;
+        margin-left: 350px;
+        margin-right: 150px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 250px;
+        padding-right: 50px;
+        font-family: nunito;
+    }
+    .container{
+        margin-top: 20px;
+        margin-bottom: 5px;
+        margin-left:90px;
+        margin-right: 10px;
+        
+    }
+    
+    .boutton{
+        display: flex;
+        flex-direction: row;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas:
+        "btnAnnuler btnSuppr";
+    
+    
+    }
+    
+    
+    .btnSuppr{
+        grid-area: btnSuppr;
+        background-color:#FF870A ;
+        color:#FFFFFF ;
+        font-size: 24px;
+        font-family: nunito;
+        width: 170px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        margin-right: 70px;
+        margin-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 60px;
+        padding-right: 10px;
+        border-radius: 45px;
+        font-family: nunito;
+    }
+    .btnSuppr a{
+    
+        text-decoration: none;
+        color:#FFFFFF;
+    
+    }
+    .btnAnnuler{
+        grid-area: btnAnnuler;
+        color:#002B3D  ;
+        font-size: 24px;
+        margin-right: 350px;
+        margin-left: 150px;
+        padding-left: 350px;
+        padding-bottom: 30px;
+        font-family: nunito;
+    }
+    footer{
+        background-color:#002B3D;
+        color:#FFFFFF;
+    }
+}

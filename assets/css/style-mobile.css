@@ -1,0 +1,200 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  margin: 2em 5em;
+}
+.container__mainContent--logo {
+  text-align: center;
+  padding: 75px 0 15px;
+  margin-bottom: 25px;
+  background: #ffffff;
+}
+.container__mainContent--logo h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 27px;
+  text-align: center;
+
+  color: #002b3d;
+}
+.container__mainContent--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container__mainContent--text a {
+  text-decoration: none;
+}
+.inscription {
+  font-family: Nunito, sans serif;
+  padding: 12px 30px;
+  background-color: #ff870a;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+.connexion {
+  font-family: Nunito, sans serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #002b3d;
+  margin-bottom: 50px;
+}
+.continuerSansCompte {
+  font-family: Roboto;
+  text-decoration: underline;
+  color: #ff870a;
+  font-size: 16px;
+  line-height: 19px;
+}
+.container__mainContent--destop {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .container__mainContent--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .container__mainContent--logo {
+    padding: 0;
+  }
+  .container__mainContent--logo h4 {
+    display: none;
+  }
+  .continuerSansCompte {
+    display: none;
+  }
+  .container__mainContent--text {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 0;
+  }
+  .connexion {
+    padding-right: 30px;
+  }
+  .container__mainContent--destop {
+    display: inline;
+  }
+  .container__mainContent__destop--block1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 90px;
+  }
+  .container__mainContent__destop__block1--text {
+    width: 50%;
+    text-align: justify;
+    padding-top: 50px;
+  }
+  .container__mainContent__destop__block1--text h2 {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 140%;
+    color: #002b3d;
+  }
+  .container__mainContent__destop__block1--text p {
+    font-family: Nunito;
+    font-size: 18px;
+    line-height: 25px;
+    color: #002b3d;
+  }
+  .button {
+    padding-top: 30px;
+  }
+  .connexion {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    color: #002b3d;
+    text-decoration: none;
+    padding-left: 40px;
+  }
+  .inscription {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .container__mainContent__destop__block1--image img {
+    width: 600px;
+    height: auto;
+  }
+  .tirezProfit {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 42%;
+    color: #002b3d;
+    padding-bottom: 20px;
+  }
+  .container__mainContent__destop--block2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .troisColonnes {
+    font-family: Nunito;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #002b3d;
+    padding-bottom: 50px;
+  }
+  .cercle {
+    border: 1px solid #002b3d;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: 42px;
+  }
+  .cercle img {
+    text-align: center;
+    width: min-content;
+  }
+  .container__mainContent__destop--block3 {
+    text-align: center;
+  }
+  .container__mainContent__destop--block3 h4 {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 42px;
+    text-align: center;
+    color: #002b3d;
+  }
+  .bottomButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottomButton .inscription {
+    width: fit-content;
+    text-align: center;
+  }
+  .bottomButton .continuerSansCompte {
+    display: inline;
+  }
+}
