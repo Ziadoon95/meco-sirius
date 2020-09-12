@@ -19,16 +19,12 @@ if (isset($_POST['article_titre']) && isset($_POST['article_contenu'])) {
 //modifications 7/9/2020
 $image_data = file_get_contents($_FILES["article_image"]["tmp_name"]);
 $image_type = $_FILES["article_image"]["type"];
-var_dump($image_type);
 
 $article_titre = strip_tags($_POST['article_titre']);
-var_dump($article_titre);
 
 $article_contenu = strip_tags($_POST['article_contenu']);
-var_dump($article_contenu);
 
 $article_cat = $_POST['categorie_nom'];
-var_dump($article_cat);
 
 /* $article_image = strip_tags($_POST['article_image']);
 */
