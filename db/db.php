@@ -12,7 +12,7 @@
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "CREATE TABLE IF NOT EXISTS `articles` (
+    $sql = "CREATE TABLE IF NOT EXISTS articles (
      `article_id` int(11) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
     `article_titre` varchar(120) NOT NULL,
     `article_contenu` text NOT NULL,
@@ -23,16 +23,16 @@
     `categorie_nom` varchar(30) DEFAULT NULL
 )";
 $conn->exec($sql);
-      $sql_two ="CREATE TABLE IF NOT EXISTS `utilisateurs` (
-        `user_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-        `user_prenom` varchar(64) COLLATE utf8_bin NOT NULL,
-        `user_nom` varchar(64) COLLATE utf8_bin NOT NULL,
-        `user_email` varchar(64) COLLATE utf8_bin NOT NULL,
-        `user_mdp` varchar(250) COLLATE utf8_bin NOT NULL,
-        `user_image` mediumblob DEFAULT NULL,
-        `user_is_connected` int(1) DEFAULT NULL
+      $sql_two ="CREATE TABLE IF NOT EXISTS utilisateurs (
+        user_id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        user_prenom varchar(64) COLLATE utf8_bin NOT NULL,
+        user_nom varchar(64) COLLATE utf8_bin NOT NULL,
+        user_email varchar(64) COLLATE utf8_bin NOT NULL,
+        user_mdp varchar(250) COLLATE utf8_bin NOT NULL,
+        user_image mediumblob DEFAULT NULL,
+        user_is_connected int(1) DEFAULT NULL
       )";    
-      
+
       $conn->exec($sql_two);
 
   } catch (PDOException $e) {
