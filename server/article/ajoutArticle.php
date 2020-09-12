@@ -6,7 +6,7 @@ session_start();
 
 $message = '';
 
-
+var_dump($_POST);
 //Message success post article
 if (isset($_POST['article_titre']) && isset($_POST['article_contenu']) && isset($_POST['article_image'])) {
   echo "";
