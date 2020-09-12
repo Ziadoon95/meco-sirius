@@ -6,8 +6,7 @@ session_start();
 
 $message = '';
 
-var_dump($_POST);
-var_dump($_FILES);
+
 //Message success post article
 if (isset($_POST['article_titre']) && isset($_POST['article_contenu'])) {
   echo "";
@@ -19,10 +18,19 @@ if (isset($_POST['article_titre']) && isset($_POST['article_contenu'])) {
 
 //modifications 7/9/2020
 $image_data = file_get_contents($_FILES["article_image"]["tmp_name"]);
+var_dump($image_data);
 $image_type = $_FILES["article_image"]["type"];
+var_dump($image_type);
+
 $article_titre = strip_tags($_POST['article_titre']);
+var_dump($article_titre);
+
 $article_contenu = strip_tags($_POST['article_contenu']);
+var_dump($article_contenu);
+
 $article_cat = $_POST['categorie_nom'];
+var_dump($article_cat);
+
 /* $article_image = strip_tags($_POST['article_image']);
 */
 //Insertion données dans DB
@@ -36,7 +44,7 @@ $statement = $conn->prepare($sql);
 //Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
 $res = $statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' =>
 $image_data, 'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]]);
-
+var_dump($res);
 if ($res) {
    header("Location: ../../client/indexArticles.php");
  
