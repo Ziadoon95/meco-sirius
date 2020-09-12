@@ -22,7 +22,7 @@ if (
       $userMail = trim($_POST["userMail"]);
       $userMdp = trim($_POST["userMdp"]);
 
-      $stmt = $conn->prepare("SELECT * FROM `utilisateurs` WHERE user_email=:user_email
+      $stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE user_email=:user_email
                 AND user_mdp=:user_mdp");
       $stmt->execute(['user_email' => $userMail, 'user_mdp' => $userMdp]);
       $user = $stmt->fetch();
