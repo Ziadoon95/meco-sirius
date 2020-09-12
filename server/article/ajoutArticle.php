@@ -33,19 +33,17 @@ var_dump($article_cat);
 /* $article_image = strip_tags($_POST['article_image']);
 */
 //Insertion données dans DB
-echo "LINE 36";
 $sql = 'INSERT INTO articles(categorie_nom , article_titre, article_contenu, article_image_data, article_image_type ,user_id) VALUES(:categ,:article_titre,
 :article_contenu, :article_image , :image_type , :user_id)';
-echo "LINE 39";
 
 //Prepare
 $statement = $conn->prepare($sql);
-echo "LINE 43";
-
+echo "before sql";
 //Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
 $res = $statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' =>
 $image_data, 'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]]);
-var_dump($res);
+echo "after sql";
+echo $res;
 if ($res) {
    header("Location: ../../client/indexArticles.php");
  
