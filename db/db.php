@@ -16,7 +16,7 @@
      article_id  serial  PRIMARY KEY,
     article_titre varchar(120) NOT NULL,
     article_contenu text NOT NULL,
-    article_date timestamp NOT NULL DEFAULT current_timestamp() ,
+    article_date timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP ,
     article_image_data blob DEFAULT NULL,
     article_image_type varchar(40) DEFAULT NULL,
     user_id int(11) DEFAULT NULL,
