@@ -20,7 +20,7 @@ if (
   } else {
     try {
 
-      $stmt = $conn->prepare("INSERT INTO `utilisateurs` ( `user_prenom`, `user_nom`, `user_email`, `user_mdp`)
+      $stmt = $conn->prepare("INSERT INTO utilisateurs ( user_prenom, user_nom, user_email, user_mdp)
             VALUES (:user_prenom ,:user_nom , :user_email, :user_mdp)");
       $stmt->bindParam(':user_prenom', $userFirstname);
       $stmt->bindParam(':user_nom', $userName);
