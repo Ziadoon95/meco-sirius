@@ -34,9 +34,12 @@ $sql = 'INSERT INTO articles(categorie_nom , article_titre, article_contenu, art
 $statement = $conn->prepare($sql);
 
 //Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
+$res = $statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' =>
+$image_data, 'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]]);
 
-if ($statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' =>
-$image_data, 'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]])) {
+if ($res) {
    header("Location: ../../client/indexArticles.php");
  
+ }else {
+   var_dump($res);
  }
