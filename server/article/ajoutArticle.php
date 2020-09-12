@@ -7,8 +7,9 @@ session_start();
 $message = '';
 
 var_dump($_POST);
+var_dump($_FILES);
 //Message success post article
-if (isset($_POST['article_titre']) && isset($_POST['article_contenu']) && isset($_POST['article_image'])) {
+if (isset($_POST['article_titre']) && isset($_POST['article_contenu'])) {
   echo "";
 } else {
   echo "Merci de remplir tous les champs";
