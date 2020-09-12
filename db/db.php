@@ -12,8 +12,8 @@
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "CREATE TABLE IF NOT EXISTS articles (
-     article_id int(11) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+    $sql = "CREATE TABLE [IF NOT EXISTS] articles (
+     article_id int(11) NOT NULL serial  PRIMARY KEY,
     article_titre varchar(120) NOT NULL,
     article_contenu text NOT NULL,
     article_date timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -21,10 +21,10 @@
     article_image_type varchar(40) DEFAULT NULL,
     user_id int(11) DEFAULT NULL,
     categorie_nom varchar(30) DEFAULT NULL
-)";
+);";
 $conn->exec($sql);
-      $sql_two ="CREATE TABLE IF NOT EXISTS utilisateurs (
-        user_id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      $sql_two ="CREATE TABLE [IF NOT EXISTS] utilisateurs (
+        user_id int(11) NOT NULL serial PRIMARY KEY,
         user_prenom varchar(64) COLLATE utf8_bin NOT NULL,
         user_nom varchar(64) COLLATE utf8_bin NOT NULL,
         user_email varchar(64) COLLATE utf8_bin NOT NULL,
