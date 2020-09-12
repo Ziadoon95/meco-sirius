@@ -8,7 +8,7 @@
   
   try {
     //$conn = new PDO("mysql:host=$servername;dbname=meco", $sqlUserName, $password);
-    $conn =new PDO('pgsql:host=$servername;port=5432;dbname=d8bj6eaum2o8hi', $sqlUserName, $password);
+    $conn =new PDO('pgsql:host=ec2-46-137-124-19.eu-west-1.compute.amazonaws.com;port=5432;dbname=d8bj6eaum2o8hi', $sqlUserName, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {
