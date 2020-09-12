@@ -18,28 +18,27 @@ if (isset($_POST['article_titre']) && isset($_POST['article_contenu'])) {
 
 //modifications 7/9/2020
 $image_data = file_get_contents($_FILES["article_image"]["tmp_name"]);
+var_dump($image_data);
 $image_type = $_FILES["article_image"]["type"];
 
 $article_titre = strip_tags($_POST['article_titre']);
-
 $article_contenu = strip_tags($_POST['article_contenu']);
-
 $article_cat = $_POST['categorie_nom'];
-
 /* $article_image = strip_tags($_POST['article_image']);
 */
 //Insertion données dans DB
-$sql = 'INSERT INTO articles(categorie_nom , article_titre, article_contenu,  article_image_type ,user_id) VALUES(:categ,:article_titre,
-:article_contenu, :image_type , :user_id)';
+
+$sql = 'INSERT INTO articles(categorie_nom , article_titre, article_contenu, article_image_data, article_image_type ,user_id) VALUES(:categ,:article_titre,
+:article_contenu, :article_image , :image_type , :user_id)';
 
 //Prepare
 $statement = $conn->prepare($sql);
-echo "before sql";
-//Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
-try {
-  $res = $statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu,  'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]]);
-echo "after sql";
-echo $res;
+try{
+
+  //Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
+$res = $statement->execute([':categ'=> $article_cat , ':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' =>
+$image_data, 'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]]);
+
 if ($res) {
    header("Location: ../../client/indexArticles.php");
  
