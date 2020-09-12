@@ -16,7 +16,7 @@ $data = [
     'id' => $_SESSION["user_id"]
 ];
 
-$sql = "UPDATE utilisateurs SET user_nom=:user_nom, `user_prenom`= :user_prenom ,`user_mdp`=:user_mdp , `user_email`=:user_email  WHERE user_id=:id";
+$sql = "UPDATE utilisateurs SET user_nom=:user_nom, user_prenom= :user_prenom ,user_mdp=:user_mdp , user_email=:user_email  WHERE user_id=:id";
 $stmt= $conn->prepare($sql);
 $res = $stmt->execute($data);
 
