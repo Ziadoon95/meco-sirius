@@ -33,7 +33,7 @@ var_dump($article_cat);
 /* $article_image = strip_tags($_POST['article_image']);
 */
 //Insertion données dans DB
-$sql = 'INSERT INTO articles(categorie_nom , article_titre, article_contenu, article_image_data, article_image_type ,user_id) VALUES(:categ,:article_titre,
+$sql = 'INSERT INTO articles(categorie_nom , article_titre, article_contenu,  article_image_type ,user_id) VALUES(:categ,:article_titre,
 :article_contenu, :image_type , :user_id)';
 
 //Prepare
