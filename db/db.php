@@ -13,14 +13,14 @@
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "CREATE TABLE IF NOT EXISTS articles (
-     `article_id` int(11) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
-    `article_titre` varchar(120) NOT NULL,
-    `article_contenu` text NOT NULL,
-    `article_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    `article_image_data` blob DEFAULT NULL,
-    `article_image_type` varchar(40) DEFAULT NULL,
-    `user_id` int(11) DEFAULT NULL,
-    `categorie_nom` varchar(30) DEFAULT NULL
+     article_id int(11) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+    article_titre varchar(120) NOT NULL,
+    article_contenu text NOT NULL,
+    article_date timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    article_image_data blob DEFAULT NULL,
+    article_image_type varchar(40) DEFAULT NULL,
+    user_id int(11) DEFAULT NULL,
+    categorie_nom varchar(30) DEFAULT NULL
 )";
 $conn->exec($sql);
       $sql_two ="CREATE TABLE IF NOT EXISTS utilisateurs (
